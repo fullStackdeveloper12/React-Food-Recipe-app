@@ -35,18 +35,20 @@ const TrendingSlider = () => {
 
   return (
     <>
-      <div className="slider2">
-        <Slider {...settings}>
-          {data.map((food) => {
-            return (
-              <div className="slider2">
-                <Link to={`${food.idMeal}`} key={food.idMeal}>
-                  <img src={food.strMealThumb} alt="" />
-                </Link>
-              </div>
-            );
-          })}
-        </Slider>
+      <div className="main">
+        <div className="slider2">
+          <Slider {...settings}>
+            {data.map((food) => {
+              return (
+                <div className="slider2">
+                  <Link to={`${food.idMeal}`} key={food.idMeal}>
+                    <img src={food.strMealThumb} alt="" />
+                  </Link>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
     </>
   );
